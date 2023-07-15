@@ -43,7 +43,7 @@ namespace ormc.Ado.Repositories
         public System.Collections.Generic.IEnumerable<Models.AdoSeasonResult> GetSeasonResults(int raceSeason)
         {
             var result = new System.Collections.Generic.List<Models.AdoSeasonResult>();
-            using (var connection = new SqlConnection(_Configuration.GetConnectionString("ormc")))
+            using (var connection = new SqlConnection(_Configuration.GetConnectionString("default")))
             {
                 connection.Open();
                 using (var command = connection.CreateCommand())
