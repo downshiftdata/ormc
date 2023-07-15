@@ -1,0 +1,16 @@
+/.vs
+
+/ormc.Ado/bin
+/ormc.Ado/obj
+
+/ormc.Api/bin
+/ormc.Api/obj
+
+/ormc.CodeFirst/bin
+/ormc.CodeFirst/obj
+
+/ormc.Dapper/bin
+/ormc.Dapper/obj
+
+/ormc.DataFirst/bin
+/ormc.DataFirst/obj
