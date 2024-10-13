@@ -4,7 +4,7 @@ BEGIN
     SET NOCOUNT ON;
     SELECT
             [TrackId],
-            [TrakName],
+            [TrackName],
             [TrackType]
         FROM [ormc].[Track]
         ORDER BY [TrackName];
