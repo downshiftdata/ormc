@@ -12,8 +12,8 @@ using ormc.CodeFirst.DataAccess;
 namespace ormc.CodeFirst.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230715021918_DriverFirstName")]
-    partial class DriverFirstName
+    [Migration("20241106135028_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace ormc.CodeFirst.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasDefaultSchema("cf")
-                .HasAnnotation("ProductVersion", "7.0.9")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -35,8 +35,7 @@ namespace ormc.CodeFirst.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("DriverId"));
 
                     b.Property<string>("DriverFirstName")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DriverLastName")
                         .HasColumnType("nvarchar(max)");
