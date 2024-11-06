@@ -21,6 +21,5 @@ public partial class Race
     [StringLength(128)]
     public string RaceName { get; set; } = null!;
 
-    [Column(TypeName = "date")]
-    public DateTime RaceDate { get; set; }
+    public DateOnly RaceDate { get; set; }
 }
